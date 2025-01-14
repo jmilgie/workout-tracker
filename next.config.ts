@@ -1,8 +1,9 @@
 import { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  
   output: 'export',  // Enables static exports
-  basePath: '/workout-tracker', // Replace with your repo name
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
     unoptimized: true
   },
