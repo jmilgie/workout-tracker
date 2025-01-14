@@ -1,0 +1,1544 @@
+{
+    "programTitle": "Milgie Workouts!",
+    "programDescription": "Below you'll find a detailed single-page layout for Week 1. It outlines the daily workouts and important notes for form and consistency. You can print this page and reference it at the gym. Enjoy!",
+    "weeks": {
+        "1": {
+            "title": "🏃‍♀️‍➡️🏋️‍♀️ Week 1",
+            "focus": "FORM & CONSISTENCY",
+            "notes": {
+                "main": [
+                    "Start moderate on weights; focus on form",
+                    "Keep rest around 60-90s on main movements, ~30-45s on smaller movements",
+                    "Track how you feel and any needed adjustments"
+                ]
+            },
+            "days": {
+                "monday": {
+                    "name": "Full-Body Strength",
+                    "type": "Paired",
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Treadmill/Bike + Dynamic Stretches",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm circles, hip circles, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Barbell Squats",
+                                    "equipment": "Barbell",
+                                    "notes": "Keep chest up, drive through heels",
+                                    "sets": 3,
+                                    "reps": 8
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Dumbbell Bent-Over Rows",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Flat back, hinge at hips, row elbows back",
+                                    "sets": 3,
+                                    "reps": 8
+                                }
+                            ],
+                            "notes": "Swap after each set, then rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Overhead Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Engage core, avoid arching back"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Plank",
+                                    "variation": [
+                                        "Forearm",
+                                        "High"
+                                    ],
+                                    "sets": 3,
+                                    "duration": "30s",
+                                    "notes": "Keep hips level, core tight"
+                                }
+                            ],
+                            "notes": "Perform simultaneously, then swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "notes": "Elbows close to torso, no swinging",
+                                    "sets": 3,
+                                    "reps": "8-10"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Overhead Extensions",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Elbows point forward, control descent",
+                                    "sets": 3,
+                                    "reps": "8-10"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "tuesday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min",
+                                    "notes": "Easy walk/jog or gentle pedal"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": 10,
+                                    "work": "1 min push",
+                                    "rest": "1 min easy",
+                                    "totalDuration": "20 min",
+                                    "notes": "Alternate higher effort with low effort"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min",
+                                    "notes": "Easy pace to gradually lower heart rate"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min",
+                                    "notes": "Light walking or pedaling"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "20-25 min",
+                                    "intensity": "moderate",
+                                    "notes": "Steady jog or moderate resistance"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min",
+                                    "notes": "Slow down to easy pace"
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [
+                        "Swap machines halfway if desired"
+                    ]
+                },
+                "wednesday": {
+                    "name": "Upper-Body Strength",
+                    "type": "Paired",
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Light Cardio + Upper Body Mobility",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm swings, shoulder rolls, scap retractions"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Bench Press or Floor Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Elbows ~45° from torso"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Bent-Over Row",
+                                    "equipment": [
+                                        "Curl Bar",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Flat back, pull elbows up and back"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Shoulder Press",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Seated or standing, core tight"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Side Planks",
+                                    "sets": 3,
+                                    "duration": "30s",
+                                    "notes": "Or regular plank variation; keep hips high"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "sets": 3,
+                                    "reps": "8-10",
+                                    "notes": "Controlled tempo"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Extensions",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": "8-10",
+                                    "notes": "Elbows in, full range of motion"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "thursday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Repeat Tuesday's approach. Adjust intensity or time as needed"
+                    ]
+                },
+                "friday": {
+                    "name": "Lower-Body Strength",
+                    "type": "Paired",
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "5 min Easy Cardio + Leg/Glute Activation",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Hip openers, leg swings, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Deadlifts",
+                                    "equipment": "Olympic Bar",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Hinge at hips, back flat"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Lunges",
+                                    "equipment": "Dumbbells",
+                                    "reps": 8,
+                                    "notes": "Step forward or backward, keep torso upright"
+                                }
+                            ],
+                            "notes": "Swap, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Glute Bridges / Hip Thrusts",
+                                    "sets": 3,
+                                    "reps": 10,
+                                    "notes": "Bodyweight or with bar/dumbbell across hips"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Calf Raises",
+                                    "equipment": [
+                                        "Bodyweight",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": "12-15",
+                                    "notes": "Lift heels, brief pause at top"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3 (Optional Core)",
+                            "type": "Optional",
+                            "exercises": [
+                                {
+                                    "name": "Plank (~30s) & Bicycle Crunch (10 reps/side)",
+                                    "sets": 2,
+                                    "reps": 10,
+                                    "notes": "Perform simultaneously, then swap or rest briefly before next set"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "saturday": {
+                    "name": "Rest or Active Recovery",
+                    "notes": [
+                        "Light walk or easy bike (20–30 min), gentle stretching"
+                    ]
+                },
+                "sunday": {
+                    "name": "Full Rest",
+                    "notes": [
+                        "No planned exercise"
+                    ]
+                }
+            },
+            "printingNotes": [
+                "Print this 'Week 1' on a single sheet (front and back if desired)",
+                "Bring to your workout area or keep on your phone for reference",
+                "Check off sets/reps as you complete them and note any weight changes"
+            ]
+        },
+        "2": {
+            "title": "Week 2",
+            "focus": "ADD A SET OR REPS",
+            "notes": {
+                "main": [
+                    "Increase total volume (sets or reps)",
+                    "Assess weight loads: If you can do all sets easily, add a bit more weight next time"
+                ]
+            },
+            "days": {
+                "monday": {
+                    "name": "Full-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Add +1 set to either Squats or Overhead Press (4 sets instead of 3).",
+                        "If you already feel comfortable, also consider adding 1–2 reps."
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Treadmill/Bike + Dynamic Stretches",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm circles, hip circles, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Barbell Squats",
+                                    "equipment": "Barbell",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "If comfortable, do 4 sets total"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Dumbbell Bent-Over Rows",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Flat back, hinge at hips"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Overhead Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Add +1 set (4 total) if not added on squats"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Plank",
+                                    "variation": [
+                                        "Forearm",
+                                        "High"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "duration": "30s",
+                                    "notes": "Possibly bump to 45s if comfortable"
+                                }
+                            ],
+                            "notes": "Perform simultaneously, then swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "sets": 3,
+                                    "reps": "8-10",
+                                    "notes": "Increase reps if easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Overhead Extensions",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": "8-10",
+                                    "notes": "Elbows point forward, controlled tempo"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "tuesday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Intervals: Extend work intervals to 1:15 or do 12 total intervals if you want more challenge",
+                        "Steady-State: Increase main work to ~25 min"
+                    ],
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25-30 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min",
+                                    "notes": "Easy walk/jog or gentle pedal"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": "10-12",
+                                    "work": "1:00 - 1:15 push",
+                                    "rest": "1:00 easy",
+                                    "notes": "Increase intensity or rounds for progression"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min",
+                                    "notes": "Gradual pace reduction"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30-35 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "20-25 min",
+                                    "intensity": "moderate",
+                                    "notes": "Consider slight incline or higher resistance"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "wednesday": {
+                    "name": "Upper-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Add +1 set to Bench/Floor Press or Shoulder Press",
+                        "Increase plank holds from 30s to 45s if comfortable"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Light Cardio + Upper Body Mobility",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm swings, shoulder rolls, scapular retractions"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Bench Press or Floor Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Add 4th set if desired"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Bent-Over Row",
+                                    "equipment": [
+                                        "Curl Bar",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Flat back, pull elbows up and back"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Shoulder Press",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Consider 4th set if not added to Bench"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Side Planks (or Plank Variation)",
+                                    "sets": 3,
+                                    "reps": 10,
+                                    "duration": "30-45s",
+                                    "notes": "Try increasing to 45s"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "sets": 3,
+                                    "reps": "8-10",
+                                    "notes": "Increase weight or reps if easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Extensions",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": "8-10",
+                                    "notes": "Keep elbows in, full extension"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "thursday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Same as Tuesday; increase intensity or time slightly"
+                    ],
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25-30 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": "10-12",
+                                    "work": "1:00 - 1:15 push",
+                                    "rest": "1:00 easy"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30-35 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "20-25 min",
+                                    "intensity": "moderate"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "friday": {
+                    "name": "Lower-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Add +1 set to Deadlifts or Lunges",
+                        "If Deadlifts feel easy, add more weight"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "5 min Easy Cardio + Leg Swings",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Hip openers, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Deadlifts",
+                                    "equipment": "Olympic Bar",
+                                    "notes": "Add a 4th set if desired"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Lunges",
+                                    "equipment": "Dumbbells",
+                                    "repsPerLeg": 8,
+                                    "notes": "Increase to 4 sets if not added to Deadlifts"
+                                }
+                            ],
+                            "notes": "Swap, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "sets": 3,
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Glute Bridges / Hip Thrusts",
+                                    "reps": 10,
+                                    "notes": "Add weight if bodyweight is easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Calf Raises",
+                                    "equipment": [
+                                        "Bodyweight",
+                                        "Dumbbells"
+                                    ],
+                                    "reps": "12-15",
+                                    "notes": "Lift heels, brief pause"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3 (Optional Core)",
+                            "type": "Optional",
+                            "sets": 2,
+                            "exercises": [
+                                {
+                                    "name": "Plank (~30-45s) & Bicycle Crunch (10 reps/side)",
+                                    "notes": "Perform simultaneously; rest briefly, then repeat"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "saturday": {
+                    "name": "Rest or Active Recovery",
+                    "notes": [
+                        "Light walk/bike, gentle stretching"
+                    ]
+                },
+                "sunday": {
+                    "name": "Full Rest",
+                    "notes": [
+                        "Complete rest day"
+                    ]
+                }
+            },
+            "printingNotes": [
+                "Print this 'Week 2' on a single sheet (front and back if desired)",
+                "Bring to your workout area or keep on your phone for reference",
+                "Check off sets/reps as you complete them and note any weight changes"
+            ]
+        },
+        "3": {
+            "title": "Week 3",
+            "focus": "INCREASE WEIGHT OR INTENSITY",
+            "notes": {
+                "main": [
+                    "If form is solid, increase weight on main lifts",
+                    "Consider lengthening intervals or reducing rest times"
+                ]
+            },
+            "days": {
+                "monday": {
+                    "name": "Full-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Increase weight on Squats and Overhead Press if comfortable",
+                        "Optionally add 1 rep (8 → 9 reps)"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Treadmill/Bike + Dynamic Stretches",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm circles, hip circles, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Barbell Squats",
+                                    "equipment": "Barbell",
+                                    "notes": "Add weight if form is solid"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Dumbbell Bent-Over Rows",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Flat back, hinge at hips, row elbows back"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Overhead Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Increase load or add 1 rep if easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Plank",
+                                    "variation": [
+                                        "Forearm",
+                                        "High"
+                                    ],
+                                    "sets": 3,
+                                    "duration": "30-45s",
+                                    "notes": "Aim for 45s if 30s is easy"
+                                }
+                            ],
+                            "notes": "Perform simultaneously, swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "sets": 3,
+                            "reps": "8-10",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "notes": "Increase weight if comfortable"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Overhead Extensions",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Elbows in, controlled lowering"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "tuesday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Intervals: Extend push intervals to 1:15–1:30 or reduce rest",
+                        "Steady-State: 25–30 min at higher speed or slight incline"
+                    ],
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25-30+ min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min",
+                                    "notes": "Easy walk/jog or gentle pedal"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": "10-12",
+                                    "work": "1:15–1:30 push",
+                                    "rest": "0:45–1:00 easy",
+                                    "notes": "Adjust based on fitness level"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min",
+                                    "notes": "Gradually lower intensity"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30+ min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "25–30 min",
+                                    "intensity": "moderate-high",
+                                    "notes": "Increase speed, incline, or resistance"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "wednesday": {
+                    "name": "Upper-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Increase Bench/Floor Press or Shoulder Press weight if form is good",
+                        "Hold planks for 45–60s"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Light Cardio + Upper Body Mobility",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm swings, shoulder rolls, scapular retractions"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Bench Press or Floor Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "notes": "Add weight if previous loads were easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Bent-Over Row",
+                                    "equipment": [
+                                        "Curl Bar",
+                                        "Dumbbells"
+                                    ],
+                                    "notes": "Flat back, pull elbows up and back"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Shoulder Press",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Go heavier if comfortable"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Side Planks (or Plank Variation)",
+                                    "sets": 3,
+                                    "duration": "45-60s",
+                                    "notes": "Progress from 45s to 60s"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "sets": 3,
+                            "reps": "8-10",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "notes": "Go heavier if all sets are easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Extensions",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Elbows in, full extension"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "thursday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Same approach as Tuesday: intervals or steady-state at higher intensity",
+                        "Consider ~30 min intervals or 35 min steady-state"
+                    ],
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25-30+ min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": "10-12",
+                                    "work": "1:15–1:30 push",
+                                    "rest": "0:45–1:00 easy"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30-35+ min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "25–30 min",
+                                    "intensity": "moderate-high"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "friday": {
+                    "name": "Lower-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Increase Deadlift or Lunge weight if form allows",
+                        "Consider 4 total sets on main lifts",
+                        "Add bar/dumbbell on Glute Bridges if bodyweight is easy"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "5 min Easy Cardio + Dynamic Leg Swings",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Hip openers, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Deadlifts",
+                                    "equipment": "Olympic Bar",
+                                    "notes": "Increase weight or add 4th set"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Lunges",
+                                    "equipment": "Dumbbells",
+                                    "repsPerLeg": 8,
+                                    "notes": "Heavier dumbbells or add 4th set"
+                                }
+                            ],
+                            "notes": "Swap, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "sets": 3,
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Glute Bridges / Hip Thrusts",
+                                    "reps": 10,
+                                    "notes": "Add a bar/dumbbell if bodyweight is too easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Calf Raises",
+                                    "equipment": [
+                                        "Bodyweight",
+                                        "Dumbbells"
+                                    ],
+                                    "reps": "12-15",
+                                    "notes": "Increase resistance if needed"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3 (Optional Core)",
+                            "type": "Optional",
+                            "sets": 2,
+                            "exercises": [
+                                {
+                                    "name": "Plank (~45s) & Bicycle Crunch (10 reps/side)",
+                                    "notes": "Perform simultaneously, rest briefly, then repeat"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "saturday": {
+                    "name": "Rest or Active Recovery",
+                    "notes": [
+                        "Light walk/bike, foam roll, stretch"
+                    ]
+                },
+                "sunday": {
+                    "name": "Full Rest",
+                    "notes": [
+                        "No planned exercise"
+                    ]
+                }
+            },
+            "printingNotes": [
+                "Print this 'Week 3' on a single sheet (front and back if desired)",
+                "Bring to your workout area or keep on your phone for reference",
+                "Check off sets/reps as you complete them and note any weight changes"
+            ]
+        },
+        "4": {
+            "title": "Week 4",
+            "focus": "FINAL PUSH & ASSESS PROGRESS",
+            "notes": {
+                "main": [
+                    "Push to current limits while staying safe",
+                    "After this week, reassess progress and update goals"
+                ]
+            },
+            "days": {
+                "monday": {
+                    "name": "Full-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "Consider 4 sets on all main exercises if you have the time/energy",
+                        "Increase reps to 10 if focusing on muscle size"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Treadmill/Bike + Dynamic Stretches",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm circles, hip circles, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Barbell Squats",
+                                    "equipment": "Barbell",
+                                    "notes": "Increase to 4 sets or 10 reps if you want more volume"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Dumbbell Bent-Over Rows",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Try heavier dumbbells or extra reps"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Overhead Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Go to 4 sets or 10 reps if comfortable"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Plank",
+                                    "variation": [
+                                        "Forearm",
+                                        "High"
+                                    ],
+                                    "sets": 3,
+                                    "duration": "30-60s",
+                                    "notes": "Aim for 60s if 30–45s is easy"
+                                }
+                            ],
+                            "notes": "Perform simultaneously, then swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "sets": 3,
+                            "reps": "8-10",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "notes": "Challenge yourself with heavier weight or more reps"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Overhead Extensions",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Control the descent, consider adding a set"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "tuesday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Intervals: 12–15 rounds or lengthen push intervals to 1:30",
+                        "Steady-State: 30 min at moderate-hard effort or add incline"
+                    ],
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25-35 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min",
+                                    "notes": "Easy pace"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": "12-15",
+                                    "work": "1:15–1:30 push",
+                                    "rest": "0:45–1:00 easy",
+                                    "notes": "Push yourself if you're ready"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30 min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "20-25 min",
+                                    "intensity": "moderate-hard",
+                                    "notes": "Increase speed or incline for extra challenge"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "wednesday": {
+                    "name": "Upper-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "4 sets for Bench/Floor Press and Shoulder Press if possible",
+                        "Increase row weight or reps",
+                        "Planks to 60s or advanced variations (e.g., single-leg plank)"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "Light Cardio + Upper Body Mobility",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Arm swings, shoulder rolls, scapular retractions"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Bench Press or Floor Press",
+                                    "equipment": [
+                                        "Barbell",
+                                        "Dumbbells"
+                                    ],
+                                    "notes": "Consider 4 sets or 10 reps if you're aiming for hypertrophy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Bent-Over Row",
+                                    "equipment": [
+                                        "Curl Bar",
+                                        "Dumbbells"
+                                    ],
+                                    "notes": "Increase weight if form is good"
+                                }
+                            ],
+                            "notes": "Swap after each set, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Shoulder Press",
+                                    "equipment": "Dumbbells",
+                                    "sets": 3,
+                                    "reps": 8,
+                                    "notes": "Go for 4 sets or 10 reps if comfortable"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Side Planks (or Plank Variation)",
+                                    "sets": 3,
+                                    "duration": "45-60s",
+                                    "notes": "Extend hold time or add difficulty"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3",
+                            "type": "Optional",
+                            "sets": 3,
+                            "reps": "8-10",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Biceps Curls",
+                                    "equipment": "Curl Bar",
+                                    "notes": "Challenge with heavier weight or more reps"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Triceps Extensions",
+                                    "equipment": "Dumbbells",
+                                    "notes": "Elbows in, full extension"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        }
+                    ]
+                },
+                "thursday": {
+                    "name": "Cardio",
+                    "type": "Bike + Treadmill",
+                    "notes": [
+                        "Add a few more intervals or run/bike longer",
+                        "Push speed or resistance"
+                    ],
+                    "options": [
+                        {
+                            "name": "Option 1: Intervals",
+                            "totalDuration": "25-35+ min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Intervals",
+                                    "rounds": "12-15",
+                                    "work": "1:15–1:30 push",
+                                    "rest": "0:45–1:00 easy"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Option 2: Steady-State",
+                            "totalDuration": "30+ min",
+                            "structure": [
+                                {
+                                    "name": "Warm-up",
+                                    "duration": "5 min"
+                                },
+                                {
+                                    "name": "Main Work",
+                                    "duration": "25-30 min",
+                                    "intensity": "moderate-hard"
+                                },
+                                {
+                                    "name": "Cool-down",
+                                    "duration": "5 min"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "friday": {
+                    "name": "Lower-Body Strength",
+                    "type": "Paired",
+                    "notes": [
+                        "4 sets on Deadlifts/Lunges if desired",
+                        "Heavier loads if form is solid",
+                        "Bar/dumbbell on Glute Bridges if easy"
+                    ],
+                    "blocks": [
+                        {
+                            "name": "Warm-Up",
+                            "type": "Together",
+                            "exercises": [
+                                {
+                                    "name": "5 min Easy Cardio + Leg/Glute Activation",
+                                    "duration": "5 min",
+                                    "intensity": "easy",
+                                    "notes": "Hip openers, leg swings, bodyweight squats"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Block 1",
+                            "sets": 3,
+                            "reps": 8,
+                            "restPeriod": "60s",
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Deadlifts",
+                                    "equipment": "Olympic Bar",
+                                    "notes": "Go for 4 sets or 10 reps if strong enough"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Lunges",
+                                    "equipment": "Dumbbells",
+                                    "repsPerLeg": 8,
+                                    "notes": "Increase dumbbell weight or add a set"
+                                }
+                            ],
+                            "notes": "Swap, rest ~60s"
+                        },
+                        {
+                            "name": "Block 2",
+                            "sets": 3,
+                            "exercises": [
+                                {
+                                    "partner": "A",
+                                    "name": "Glute Bridges / Hip Thrusts",
+                                    "reps": 10,
+                                    "notes": "Use a bar/dumbbell if bodyweight is too easy"
+                                },
+                                {
+                                    "partner": "B",
+                                    "name": "Calf Raises",
+                                    "equipment": [
+                                        "Bodyweight",
+                                        "Dumbbells"
+                                    ],
+                                    "reps": "12-15",
+                                    "notes": "Add heavier load if possible"
+                                }
+                            ],
+                            "notes": "Swap, rest ~30–45s"
+                        },
+                        {
+                            "name": "Block 3 (Optional Core)",
+                            "type": "Optional",
+                            "sets": 2,
+                            "exercises": [
+                                {
+                                    "name": "Plank (~60s) & Bicycle Crunch (10-12 reps/side)",
+                                    "notes": "Perform simultaneously, rest briefly, then repeat"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "saturday": {
+                    "name": "Rest or Active Recovery",
+                    "notes": [
+                        "Gentle walking, stretching, or yoga"
+                    ]
+                },
+                "sunday": {
+                    "name": "Full Rest",
+                    "notes": [
+                        "No planned exercise; recharge"
+                    ]
+                }
+            },
+            "printingNotes": [
+                "Print this 'Week 4' on a single sheet (front and back if desired)",
+                "Bring to your workout area or keep on your phone for reference",
+                "Check off sets/reps as you complete them and note any weight changes"
+            ]
+        }
+    }
+}
