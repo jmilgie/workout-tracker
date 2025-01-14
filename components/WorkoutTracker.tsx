@@ -1,10 +1,8 @@
-//components/WorkoutTracker.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, Tab, Tabs, Alert, Button, Container, Accordion } from 'react-bootstrap';
 import { Upload, RefreshCw, Check, X } from 'lucide-react';
 import VideoCarousel from './VideoCarousel';
 
-// Interfaces remain the same
 interface Exercise {
   name: string;
   sets?: number;
@@ -67,8 +65,13 @@ const WorkoutTracker: React.FC = () => {
   const [completedExercises, setCompletedExercises] = useState<{ [key: string]: boolean }>({});
   const [workoutData, setWorkoutData] = useState<WorkoutData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [videoLinks, setVideoLinks] = useState<{ title: string; link: string; thumbnail?: string }[]>([]);
-  const [expandedDays, setExpandedDays] = useState<string[]>([]);
+  interface Video {
+  title: string;
+  link: string;
+  thumbnail: string;
+}
+
+const [videoLinks, setVideoLinks] = useState<Video[]>([]);
 
   useEffect(() => {
     const loadWorkoutData = async () => {
@@ -84,7 +87,7 @@ const WorkoutTracker: React.FC = () => {
 
     const loadVideoLinks = async () => {
       try {
-        const response = await fetch('/api/videos');
+        const response = await fetch('/workoutvideos.json');
         const data = await response.json();
         if (Array.isArray(data)) {
           setVideoLinks(data);
@@ -105,7 +108,7 @@ const WorkoutTracker: React.FC = () => {
       .replace(/[^a-z0-9\s]/g, '')
       .trim();
 
-  const filterVideos = (exercise: Exercise) => {
+  const filterVideos = (exercise: Exercise): { primaryVideos: Video[]; relatedVideos: Video[]; } => {
     if (!exercise || !videoLinks.length) return { primaryVideos: [], relatedVideos: [] };
 
     const exerciseKeywords = normalizeString(exercise.name).split(/\s+/);
@@ -265,13 +268,7 @@ const WorkoutTracker: React.FC = () => {
                   <Accordion>
                     {Object.entries(weekData.days || {}).map(([day, dayData]) => (
                       <Accordion.Item key={day} eventKey={day}>
-                        <Accordion.Header
-                          onClick={() =>
-                            setExpandedDays((prev) =>
-                              prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
-                            )
-                          }
-                        >
+                        <Accordion.Header>
                           <div>
                             <div className="text-capitalize">{day}</div>
                             <small className="text-muted">

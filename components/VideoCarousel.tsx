@@ -1,8 +1,19 @@
-//components/VideoCarousel.tsx
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 
-const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }) => {
+interface Video {
+  link: string;
+  title: string;
+  thumbnail: string;
+}
+
+interface VideoCarouselProps {
+  primaryVideos?: Video[];
+  relatedVideos?: Video[];
+}
+
+const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }: VideoCarouselProps) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showingRelated, setShowingRelated] = useState(false);
@@ -18,20 +29,6 @@ const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }) => {
   const canScrollUp = relatedScrollIndex > 0;
   const canScrollDown = relatedScrollIndex < totalPages - 1;
 
-  const handleNext = () => {
-    setCurrentVideoIndex((prev) =>
-      prev === currentVideos.length - 1 ? 0 : prev + 1
-    );
-    setIsPlaying(false);
-  };
-
-  const handlePrev = () => {
-    setCurrentVideoIndex((prev) =>
-      prev === 0 ? currentVideos.length - 1 : prev - 1
-    );
-    setIsPlaying(false);
-  };
-
   const handleScrollUp = () => {
     setRelatedScrollIndex(prev => Math.max(0, prev - 1));
   };
@@ -40,13 +37,13 @@ const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }) => {
     setRelatedScrollIndex(prev => Math.min(totalPages - 1, prev + 1));
   };
 
-  const switchVideoType = (showRelated, index = 0) => {
+  const switchVideoType = (showRelated: boolean, index: number = 0) => {
     setShowingRelated(showRelated);
     setCurrentVideoIndex(index);
     setIsPlaying(false);
   };
 
-  const getYouTubeEmbedURL = (link, autoplay = false) => {
+  const getYouTubeEmbedURL = (link: string, autoplay: boolean = false) => {
     const videoId = new URL(link).searchParams.get('v');
     if (!videoId) return link;
     return `https://www.youtube.com/embed/${videoId}?${
@@ -78,10 +75,11 @@ const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }) => {
                   />
                 ) : currentVideo ? (
                   <div className="w-full h-full relative">
-                    <img
+                    <Image
                       src={currentVideo.thumbnail}
                       alt={currentVideo.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <button
@@ -135,11 +133,12 @@ const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }) => {
                     className="w-full flex gap-2 p-2 hover:bg-gray-50 rounded-lg"
                   >
                     <div className="w-24 flex-shrink-0">
-                      <div className="aspect-video bg-gray-100 rounded overflow-hidden">
-                        <img
+                      <div className="relative aspect-video bg-gray-100 rounded overflow-hidden">
+                        <Image
                           src={video.thumbnail}
                           alt={video.title}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
                     </div>
