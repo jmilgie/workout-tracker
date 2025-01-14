@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  output: 'export',  // Enables static exports
+  basePath: '/workout-tracker', // Replace with your repo name
+  images: {
+    unoptimized: true
+  },
+}
 
-export default nextConfig;
+export default nextConfig
