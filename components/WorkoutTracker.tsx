@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Tab, Tabs, Alert, Button, Container, Accordion } from 'react-bootstrap';
-import { Upload, RefreshCw, Check, X } from 'lucide-react';
+import { Upload, RefreshCw, Check, X, Dumbbell, Clock, RotateCcw, Users } from 'lucide-react';
 import VideoCarousel from './VideoCarousel';
 
 interface Exercise {
@@ -11,6 +11,7 @@ interface Exercise {
   duration?: string;
   equipment?: string | string[];
   partner?: string;
+  notes?: string;
 }
 
 interface Block {
@@ -60,63 +61,62 @@ interface WorkoutData {
   };
 }
 
-const WorkoutTracker: React.FC = () => {
-  const [activeWeek, setActiveWeek] = useState<string>('1');
-  const [completedExercises, setCompletedExercises] = useState<{ [key: string]: boolean }>({});
-  const [workoutData, setWorkoutData] = useState<WorkoutData | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  interface Video {
+interface Video {
   title: string;
   link: string;
   thumbnail: string;
 }
 
-const [videoLinks, setVideoLinks] = useState<Video[]>([]);
+const WorkoutTracker: React.FC = () => {
+  const [activeWeek, setActiveWeek] = useState<string>('1');
+  const [completedExercises, setCompletedExercises] = useState<{ [key: string]: boolean }>({});
+  const [workoutData, setWorkoutData] = useState<WorkoutData | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [videoLinks, setVideoLinks] = useState<Video[]>([]);
 
   useEffect(() => {
     const loadWorkoutData = async () => {
-        try {
-          // Get the full URL based on whether we're in development or production
-          const baseUrl = process.env.NODE_ENV === 'development' 
-            ? '' 
-            : '/workout-tracker';
-          
-          const response = await fetch(`${baseUrl}/workout.json`);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          const data: WorkoutData = await response.json();
-          setWorkoutData(data);
-        } catch (err) {
-          setError('Error loading workout data');
-          console.error('Error loading workout data:', err);
+      try {
+        const baseUrl = process.env.NODE_ENV === 'development' 
+          ? '' 
+          : '/workout-tracker';
+        
+        const response = await fetch(`${baseUrl}/workout.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-      };
-  
-      const loadVideoLinks = async () => {
-        try {
-          const baseUrl = process.env.NODE_ENV === 'development' 
-            ? '' 
-            : '/workout-tracker';
-          
-          const response = await fetch(`${baseUrl}/workoutvideos.json`);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          const data = await response.json();
-          if (Array.isArray(data)) {
-            setVideoLinks(data);
-          } else {
-            throw new Error('Invalid video data format');
-          }
-        } catch (err) {
-          console.error('Error loading video data:', err);
+        const data: WorkoutData = await response.json();
+        setWorkoutData(data);
+      } catch (err) {
+        setError('Error loading workout data');
+        console.error('Error loading workout data:', err);
+      }
+    };
+
+    const loadVideoLinks = async () => {
+      try {
+        const baseUrl = process.env.NODE_ENV === 'development' 
+          ? '' 
+          : '/workout-tracker';
+        
+        const response = await fetch(`${baseUrl}/workoutvideos.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-      };
-  
-      loadWorkoutData();
-      loadVideoLinks();
-    }, []);
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setVideoLinks(data);
+        } else {
+          throw new Error('Invalid video data format');
+        }
+      } catch (err) {
+        console.error('Error loading video data:', err);
+      }
+    };
+
+    loadWorkoutData();
+    loadVideoLinks();
+  }, []);
 
   const normalizeString = (str: string) =>
     str?.toLowerCase()
@@ -193,7 +193,6 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
     }
   };
 
-
   const toggleExercise = (weekNum: string, day: string, blockIndex: number, exerciseIndex: number) => {
     const key = `${weekNum}-${day}-${blockIndex}-${exerciseIndex}`;
     setCompletedExercises((prev) => ({
@@ -202,20 +201,131 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
     }));
   };
 
-  const formatExerciseText = (exercise: Exercise): string => {
-    const details: string[] = [];
-    if (exercise.sets) details.push(`${exercise.sets} sets`);
-    if (exercise.reps) details.push(`${exercise.reps} reps`);
-    if (exercise.repsPerLeg) details.push(`${exercise.repsPerLeg} reps per leg`);
-    if (exercise.duration) details.push(exercise.duration);
-    if (exercise.equipment) {
-      const eq = Array.isArray(exercise.equipment) ? exercise.equipment.join('/') : exercise.equipment;
-      details.push(`(${eq})`);
-    }
+  const ExerciseCard: React.FC<{
+    exercise: Exercise;
+    isCompleted: boolean;
+    onToggle: () => void;
+    primaryVideos: Video[];
+    relatedVideos: Video[];
+  }> = ({ exercise, isCompleted, onToggle, primaryVideos, relatedVideos }) => {
+    const getEquipmentColor = (equipment: string) => {
+      const colors: { [key: string]: string } = {
+        'Barbell': 'bg-blue-100 text-blue-800',
+        'Dumbbells': 'bg-purple-100 text-purple-800',
+        'Kettlebell': 'bg-green-100 text-green-800',
+        'Bodyweight': 'bg-gray-100 text-gray-800',
+        'Resistance Band': 'bg-red-100 text-red-800'
+      };
+      return colors[equipment] || 'bg-gray-100 text-gray-800';
+    };
 
-    return `${exercise.partner ? `Partner ${exercise.partner}: ` : ''}${exercise.name} ${
-      details.length ? details.join(', ') : ''
-    }`;
+    return (
+      <div className="mb-4">
+        <div 
+          className={`rounded-lg border ${isCompleted ? 'bg-gray-50 border-gray-200' : 'bg-white border-gray-300'} 
+          shadow-sm hover:shadow-md transition-all duration-200`}
+        >
+          <div className="p-4">
+            {/* Exercise Header */}
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={onToggle}
+                  className={`rounded-full p-1 ${
+                    isCompleted ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-400'
+                  }`}
+                >
+                  {isCompleted ? <Check size={20} /> : <X size={20} />}
+                </button>
+                <h4 className={`text-lg font-medium ${isCompleted ? 'line-through text-gray-400' : 'text-gray-900'}`}>
+                  {exercise.name}
+                </h4>
+              </div>
+            </div>
+
+            {/* Exercise Details */}
+            <div className="flex flex-wrap gap-2 mb-3">
+              {/* Sets & Reps Group */}
+              <div className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
+                {exercise.sets && (
+                  <div className="flex items-center text-gray-700">
+                    <RotateCcw size={16} className="mr-1" />
+                    <span>{exercise.sets} sets</span>
+                  </div>
+                )}
+                {exercise.sets && (exercise.reps || exercise.repsPerLeg) && (
+                  <span className="text-gray-400 mx-1">•</span>
+                )}
+                {exercise.reps && (
+                  <div className="flex items-center text-gray-700">
+                    <span>{exercise.reps} reps</span>
+                  </div>
+                )}
+                {exercise.repsPerLeg && (
+                  <div className="flex items-center text-gray-700">
+                    <span>{exercise.repsPerLeg} reps/leg</span>
+                  </div>
+                )}
+              </div>
+              
+              {/* Duration if present */}
+              {exercise.duration && (
+                <div className="flex items-center bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
+                  <Clock size={16} className="mr-1" />
+                  <span>{exercise.duration}</span>
+                </div>
+              )}
+
+              {/* Equipment Tags */}
+              {Array.isArray(exercise.equipment) ? (
+                exercise.equipment.map((eq, idx) => (
+                  <div key={idx} className={`flex items-center px-3 py-1 rounded-full ${getEquipmentColor(eq)}`}>
+                    <Dumbbell size={16} className="mr-1" />
+                    <span>{eq}</span>
+                  </div>
+                ))
+              ) : exercise.equipment && (
+                <div className={`flex items-center px-3 py-1 rounded-full ${getEquipmentColor(exercise.equipment)}`}>
+                  <Dumbbell size={16} className="mr-1" />
+                  <span>{exercise.equipment}</span>
+                </div>
+              )}
+
+              {/* Partner Tag */}
+              {exercise.partner && (
+                <div className={`flex items-center px-3 py-1 rounded-full ${
+                  exercise.partner === 'A' 
+                    ? 'bg-blue-100 text-blue-800' 
+                    : exercise.partner === 'B'
+                    ? 'bg-purple-100 text-purple-800'
+                    : 'bg-indigo-100 text-indigo-800'
+                }`}>
+                  <Users size={16} className="mr-1" />
+                  <span>Partner {exercise.partner}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Exercise Notes */}
+            {exercise.notes && (
+              <div className="text-sm text-gray-600 italic mt-2">
+                Note: {exercise.notes}
+              </div>
+            )}
+
+            {/* Video Carousel */}
+            {!isCompleted && (primaryVideos.length > 0 || relatedVideos.length > 0) && (
+              <div className="mt-3">
+                <VideoCarousel
+                  primaryVideos={primaryVideos}
+                  relatedVideos={relatedVideos}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
   };
 
   if (!workoutData) {
@@ -325,29 +435,14 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
                                   const { primaryVideos, relatedVideos } = filterVideos(exercise);
 
                                   return (
-                                    <div key={exerciseIndex} className="mb-3">
-                                      <div
-                                        className="d-flex align-items-center gap-2 p-2 bg-light rounded cursor-pointer"
-                                        onClick={() => toggleExercise(week, day, blockIndex, exerciseIndex)}
-                                      >
-                                        {isCompleted ? (
-                                          <Check className="text-success" size={20} />
-                                        ) : (
-                                          <X className="text-muted" size={20} />
-                                        )}
-                                        <span className={isCompleted ? 'text-muted text-decoration-line-through' : ''}>
-                                          {formatExerciseText(exercise)}
-                                        </span>
-                                      </div>
-                                      {!isCompleted && (primaryVideos.length > 0 || relatedVideos.length > 0) && (
-                                        <div className="ps-4 mt-2">
-                                          <VideoCarousel
-                                            primaryVideos={primaryVideos}
-                                            relatedVideos={relatedVideos}
-                                          />
-                                        </div>
-                                      )}
-                                    </div>
+                                    <ExerciseCard
+                                      key={exerciseIndex}
+                                      exercise={exercise}
+                                      isCompleted={isCompleted}
+                                      onToggle={() => toggleExercise(week, day, blockIndex, exerciseIndex)}
+                                      primaryVideos={primaryVideos}
+                                      relatedVideos={relatedVideos}
+                                    />
                                   );
                                 })}
                               </div>
