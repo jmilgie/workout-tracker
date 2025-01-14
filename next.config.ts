@@ -3,7 +3,7 @@ import { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   
   output: 'export',  // Enables static exports
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: process.env.NODE_ENV === 'production' ? '/workout-tracker' : '',
   images: {
     unoptimized: true
   },

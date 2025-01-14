@@ -76,11 +76,12 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
   useEffect(() => {
     const loadWorkoutData = async () => {
         try {
-          // Get the base path from the environment or construct it
-          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+          // Get the full URL based on whether we're in development or production
+          const baseUrl = process.env.NODE_ENV === 'development' 
+            ? '' 
+            : '/workout-tracker';
           
-          // Fetch workout data with the correct path
-          const response = await fetch(`${basePath}/workout.json`);
+          const response = await fetch(`${baseUrl}/workout.json`);
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -92,11 +93,13 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
         }
       };
   
-
       const loadVideoLinks = async () => {
         try {
-          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-          const response = await fetch(`${basePath}/workoutvideos.json`);
+          const baseUrl = process.env.NODE_ENV === 'development' 
+            ? '' 
+            : '/workout-tracker';
+          
+          const response = await fetch(`${baseUrl}/workoutvideos.json`);
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -172,8 +175,11 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
 
   const resetToDefault = async () => {
     try {
-      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      const response = await fetch(`${basePath}/workout.json`);
+      const baseUrl = process.env.NODE_ENV === 'development' 
+        ? '' 
+        : '/workout-tracker';
+      
+      const response = await fetch(`${baseUrl}/workout.json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -186,6 +192,7 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
       console.error('Error resetting to default:', err);
     }
   };
+
 
   const toggleExercise = (weekNum: string, day: string, blockIndex: number, exerciseIndex: number) => {
     const key = `${weekNum}-${day}-${blockIndex}-${exerciseIndex}`;
