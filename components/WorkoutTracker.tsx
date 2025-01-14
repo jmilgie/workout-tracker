@@ -75,33 +75,45 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
 
   useEffect(() => {
     const loadWorkoutData = async () => {
-      try {
-        const response = await fetch('/workout.json');
-        const data: WorkoutData = await response.json();
-        setWorkoutData(data);
-      } catch (err) {
-        setError('Error loading workout data');
-        console.error('Error loading workout data:', err);
-      }
-    };
-
-    const loadVideoLinks = async () => {
-      try {
-        const response = await fetch('/workoutvideos.json');
-        const data = await response.json();
-        if (Array.isArray(data)) {
-          setVideoLinks(data);
-        } else {
-          throw new Error('Invalid video data format');
+        try {
+          // Get the base path from the environment or construct it
+          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+          
+          // Fetch workout data with the correct path
+          const response = await fetch(`${basePath}/workout.json`);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data: WorkoutData = await response.json();
+          setWorkoutData(data);
+        } catch (err) {
+          setError('Error loading workout data');
+          console.error('Error loading workout data:', err);
         }
-      } catch (err) {
-        console.error('Error loading video data:', err);
-      }
-    };
+      };
+  
 
-    loadWorkoutData();
-    loadVideoLinks();
-  }, []);
+      const loadVideoLinks = async () => {
+        try {
+          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+          const response = await fetch(`${basePath}/workoutvideos.json`);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          if (Array.isArray(data)) {
+            setVideoLinks(data);
+          } else {
+            throw new Error('Invalid video data format');
+          }
+        } catch (err) {
+          console.error('Error loading video data:', err);
+        }
+      };
+  
+      loadWorkoutData();
+      loadVideoLinks();
+    }, []);
 
   const normalizeString = (str: string) =>
     str?.toLowerCase()
@@ -160,7 +172,11 @@ const [videoLinks, setVideoLinks] = useState<Video[]>([]);
 
   const resetToDefault = async () => {
     try {
-      const response = await fetch('/workout.json');
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+      const response = await fetch(`${basePath}/workout.json`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data: WorkoutData = await response.json();
       setWorkoutData(data);
       setCompletedExercises({});
