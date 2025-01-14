@@ -12,7 +12,6 @@ interface VideoCarouselProps {
   primaryVideos?: Video[];
   relatedVideos?: Video[];
 }
-
 const VideoCarousel = ({ primaryVideos = [], relatedVideos = [] }: VideoCarouselProps) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
